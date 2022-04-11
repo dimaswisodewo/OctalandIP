@@ -56,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/OctalandIP_Build.loader.js";
+      var loaderUrl = buildUrl + "/OctalandIP_Build_NoCompression.loader.js";
       var config = {
-        dataUrl: buildUrl + "/OctalandIP_Build.data.unityweb",
-        frameworkUrl: buildUrl + "/OctalandIP_Build.framework.js.unityweb",
-        codeUrl: buildUrl + "/OctalandIP_Build.wasm.unityweb",
+        dataUrl: buildUrl + "/OctalandIP_Build_NoCompression.data",
+        frameworkUrl: buildUrl + "/OctalandIP_Build_NoCompression.framework.js",
+        codeUrl: buildUrl + "/OctalandIP_Build_NoCompression.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Octaland_IP_SRP",
@@ -80,7 +80,7 @@
         // Avoid draining fillrate performance on mobile devices,
         // and default/override low DPI mode on mobile browsers.
         config.devicePixelRatio = 1;
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
+        // unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         canvas.style.width = "960px";
         canvas.style.height = "600px";
